@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  user-select: none;
+  background: linear-gradient(177deg, #f44336, blue);
+}
+.parent {
+  width: 350px;
+  height: 80%;
+  background: white;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.rate {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.rate div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 65px;
+  position: relative;
+}
+.rate div:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 45px;
+  background-color: black;
+  top: 39px;
+  right: -31px;
+}
+.rate div span {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content {
+  padding: 0px 20px;
+  height: 230px;
+  text-align: left;
+  display: flex;
+  position: relative;
+  width: 350px;
+  overflow: hidden;
+}
+.content > div {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  position: absolute;
+  width: 350px;
+  padding: 20px;
+  transform: translateX(0px);
+  transition: 1s all;
+}
+.content > div.nex1 {
+  transform: translateX(-350px);
+}
+.content > div.nex2 {
+  transform: translateX(-700px);
+}
+.content > div.pre1 {
+  transform: translateX(0px);
+}
+.content > div.nex3 {
+  transform: translateX(-1050px);
+}
+
+.content > div.pre2 {
+  transform: translateX(-350px);
+}
+
+.content > div.pre3 {
+  transform: translateX(-700px);
+}
+
+.content > .page1 {
+  left: 0px;
+}
+.content > .page2 {
+  left: 350px;
+}
+.content > .page3 {
+  left: 700px;
+}
+.content > .page4 {
+  left: 1050px;
+}
+.content .input1,
+.content .input2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.content div select,
+.content div input {
+  outline: none;
+  padding: 0 0 0 5px;
+  height: 24px;
+}
+.page1 button,
+.page4 button {
+  width: 100%;
+}
+.content .btn {
+  display: flex;
+  justify-content: space-between;
+}
+.content .btn button:hover {
+  transition: 1s all;
+  background-color: #58001d;
+}
+button {
+  color: white;
+  background: #e91e63;
+  outline: none;
+  border: none;
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 500;
+  width: 45%;
+  cursor: pointer;
+}
+
+.rate div div i {
+  color: #e91e63;
+  font-size: 30px;
+  position: absolute;
+  background: white;
+  top: -30px;
+  left: 18px;
+  display: none;
+}
+/* ================================== */
+.one.checked p {
+  color: #e91e63;
+}
+.one.checked div i {
+  display: block;
+}
+.one.checked::after {
+  background-color: #e91e63 !important;
+}
+.two.checked p {
+  color: #e91e63;
+}
+.two.checked div i {
+  display: block;
+}
+.two.checked::after {
+  background-color: #e91e63 !important;
+}
+.three.checked p {
+  color: #e91e63;
+}
+.three.checked div i {
+  display: block;
+}
+.three.checked::after {
+  background-color: #e91e63 !important;
+}
+.four.checked p {
+  color: #e91e63;
+}
+.four.checked div i {
+  display: block;
+}
